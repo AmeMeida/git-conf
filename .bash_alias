@@ -1,0 +1,9 @@
+# Path variables
+
+
+# Scripts
+
+alias 'temp'='bash ~/git-conf/scripts/temp.sh'
+alias 'push'='bash ~/git-conf/scripts/pusher.sh'
+alias 'branch'='bash ~/git-conf/scripts/branch.sh'
+alias 'clone'='bash ~/git-conf/scripts/clone.sh'
