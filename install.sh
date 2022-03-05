@@ -1,20 +1,17 @@
 #!/usr/bin/bash
 
-cp .bash_alias ~/
+cp ~/git-conf/.bash_alias ~/
 
-bash ~/git-conf/script/temp.sh create
+bash ~/git-conf/scripts/temp.sh create
 
 rm -rf ~/git
 mkdir -p ~/git
 cd ~/git
 
-clear
-
 echo "Bem vindo ao script de inicialização do Git!"
 
-printf 
 read -p "Por favor, insira seu nome de usuário:  " USERNAME
-read -p "Por favor, insira seu email:  "USEREMAIL
+read -p "Por favor, insira seu email:  " USEREMAIL
 read -p "Insira o nome do seu repositório:  " REPONAME
 
 USERURL=https://github.com/${USERNAME}

@@ -1,18 +1,27 @@
 #!/usr/bin/bash
 
-if [ $1 = "create" ]
+cd ~
+
+if [ $1 = "create" ];
     then
         mkdir ~/temp
-        ln -s ~/temp ~/Desktop/temp
-    elif [ $1 = "remove" ]
+        ln -s ~/temp ~/Desktop
+	echo "Pasta temporária criada!"
+    elif [ $1 = "remove" ];
     then
         rm -rf ~/temp
-    elif [ $1 = "reset" ]
-        rm -rf ~/temp
+	rm -rf ~/Desktop/temp
+	echo "Limpeza realizada!"
+    elif [ $1 = "reset" ];
+    then
+	rm -rf ~/temp
+	rm -rf ~/Desktop/temp
         mkdir ~/temp
         ln -s ~/temp ~/Desktop/temp
+	echo "Todos os arquivos da pasta temporária foram deletados."
     else 
         echo "Opções:  "
-        echo "  --c Cria a pasta temp"
-        echo "  --r Apaga permanentemente a pasta temp"
+        echo "  create -> Cria a pasta temp"
+        echo "  remove -> Apaga permanentemente a pasta temp"
+	echo "  reset  -> Apaga todos os arquivos na pasta temp"
 fi
