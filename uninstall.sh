@@ -8,7 +8,7 @@ if [ ${OPTION} == 'y' ]; then
     bash ~/git-conf/scripts/temp.sh remove
 
     echo "">~/.gitconfig
-    history -c
+    echo "">~/.bashhistory
     rm -rf ~/git
 
     echo "Limpeza realizada. Tchau!"

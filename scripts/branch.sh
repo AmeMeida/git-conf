@@ -21,9 +21,9 @@ read BRANCH
 
 if [ $INPUT -eq 1 ]; then
     git branch $BRANCH 
-elif [ $INPUT -eq 2 ] then
+elif [ $INPUT -eq 2 ]; then
     git checkout $BRANCH
-elif [ $INPUT -eq 3 ] then
+elif [ $INPUT -eq 3 ]; then
     git checkout -D $BRANCH
 fi
 

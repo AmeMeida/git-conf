@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
 cp .bash_alias ~/
-source ~/.bash_alias
+
+bash ~/git-conf/script/temp.sh create
 
 rm -rf ~/git
 mkdir -p ~/git
@@ -11,22 +12,16 @@ clear
 
 echo "Bem vindo ao script de inicialização do Git!"
 
-printf "Por favor, insira seu nome de usuário:  "
-read USERNAME
-printf "Por favor, insira seu email:  "
-read USEREMAIL
-printf "Insira o nome do seu repositório:  "
-read REPONAME
-
-BRANCH=main
+printf 
+read -p "Por favor, insira seu nome de usuário:  " USERNAME
+read -p "Por favor, insira seu email:  "USEREMAIL
+read -p "Insira o nome do seu repositório:  " REPONAME
 
 USERURL=https://github.com/${USERNAME}
-REPOURL=https://github.com/${USERNAME}/${REPONAME}
+REPOURL=https://github.com/${USERNAME}/${REPONAME}.git
 
 git config --global user.name $USERNAME
 git config --global user.email $USEREMAIL
 git clone $REPOURL
-
-git branch --set-upstream ${BRANCH} origin/${BRANCH}
 
 cd $REPONAME
