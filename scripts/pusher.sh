@@ -6,4 +6,4 @@ git add .
 
 read -p "Escreva a mensagem da commit:  " COMMITMESSAGE
 git commit -m "${COMMITMESSAGE}"
-git push -u origin ${BRANCH}
+git push -u origin main 
