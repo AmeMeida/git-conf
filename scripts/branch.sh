@@ -10,16 +10,15 @@ echo "[2] - Branch pré-existente"
 echo "[3] - Remover um branch"
 read -p "Input:  " INPUT
 
-if [ INPUT -lt 3 ]; then
+if [ ${INPUT} -gt 3 ]; then
     echo "Opção inválida."
-    quit
+    exit
 fi
 
-printf "Insira o nome do branch:  "
-read BRANCH
+read -p "Insira o nome do branch:  " BRANCH
 
 if [ ${INPUT} -eq 1 ]; then
-        git checkout -u -b ${BRANCH}
+        git checkout -b ${BRANCH}
     elif [ ${INPUT} -eq 2 ]; then
         git checkout -u ${BRANCH}
     elif [ ${INPUT} -eq 3 ]; then
