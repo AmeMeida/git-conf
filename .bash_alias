@@ -1,6 +1,6 @@
 # Path variables
-alias 'g'='~/git'
-alias 'conf'='~/git-conf'
+alias 'cdgit'='cd ~/git'
+alias 'cdconf'='cd ~/git-conf'
 
 
 # Scripts
@@ -8,9 +8,9 @@ alias 'temp'='bash ~/git-conf/scripts/temp.sh'
 alias 'push'='bash ~/git-conf/scripts/pusher.sh'
 alias 'branch'='bash ~/git-conf/scripts/branch.sh'
 alias 'clone'='bash ~/git-conf/scripts/clone.sh'
-
+alias 'newtoken'='bash ~/git-conf/scripts/setToken.sh'
 alias 'install'='bash ~/git-conf/install.sh'
-alias 'uninstall'='bash ~/git-conf/uninstall.sh'
+alias 'uninstall'='bash ~/git-conf/uninstall.sh && history -c'
 alias 'initiate'='bash ~/git-conf/install.sh && source ~/.bash_alias && cd ~/git'
 
 
@@ -18,6 +18,9 @@ alias 'initiate'='bash ~/git-conf/install.sh && source ~/.bash_alias && cd ~/git
 alias 'cls'='clear'
 alias 'md'='mkdir'
 alias 'copy'='cp'
+alias 'ralias'='source ~/.bash_alias'
+alias 'token'='cat ~/temp/token.txt'
+alias 'gatinha'='cat'
 
 
 # Git alias
@@ -25,4 +28,6 @@ alias gcl='git clone --depth 1'
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
-alias gp='git push origin master'
+alias gp='git push -u origin main'
+alias gt='git status'
+alias status='git status'

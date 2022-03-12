@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+cp ~/git-conf/.bash_profile ~/
 cp ~/git-conf/.bash_alias ~/
 
 bash ~/git-conf/scripts/temp.sh create
