@@ -2,19 +2,16 @@
 
 cd ~
 
-if [ $1 = "create" ];
-    then
+if [ $1 = "create" ]; then
         mkdir -p ~/temp
         rm -rf ~/Desktop/temp
         ln -s ~/temp ~/Desktop
 	    echo "Pasta temporária criada!"
-    elif [ $1 = "remove" ];
-    then
+    elif [ $1 = "remove" ]; then
         rm -rf ~/temp
 	    rm -rf ~/Desktop/temp
 	    echo "Limpeza realizada!"
-    elif [ $1 = "reset" ];
-    then
+    elif [ $1 = "reset" ]; then
 	    rm -rf ~/temp
 	    rm -rf ~/Desktop/temp
         mkdir ~/temp

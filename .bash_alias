@@ -11,7 +11,7 @@ alias 'clone'='bash ~/git-conf/scripts/clone.sh'
 alias 'newtoken'='bash ~/git-conf/scripts/setToken.sh'
 alias 'install'='bash ~/git-conf/install.sh'
 alias 'uninstall'='bash ~/git-conf/uninstall.sh && history -c'
-alias 'initiate'='bash ~/git-conf/install.sh && source ~/.bash_alias && cd ~/git'
+alias 'initiate'='bash ~/git-conf/install.sh && source ~/.bash_profile && cd ~/git'
 
 
 # Useful alias

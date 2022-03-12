@@ -8,8 +8,7 @@ echo "O que você deseja fazer?"
 echo "[1] - Novo branch"
 echo "[2] - Branch pré-existente"
 echo "[3] - Remover um branch"
-printf "Input:  "
-read INPUT
+read -p "Input:  " INPUT
 
 if [ INPUT -lt 3 ]; then
     echo "Opção inválida."
@@ -19,12 +18,12 @@ fi
 printf "Insira o nome do branch:  "
 read BRANCH
 
-if [ $INPUT -eq 1 ]; then
-    git branch $BRANCH 
-elif [ $INPUT -eq 2 ]; then
-    git checkout $BRANCH
-elif [ $INPUT -eq 3 ]; then
-    git checkout -D $BRANCH
+if [ ${INPUT} -eq 1 ]; then
+        git checkout -u -b ${BRANCH}
+    elif [ ${INPUT} -eq 2 ]; then
+        git checkout -u ${BRANCH}
+    elif [ ${INPUT} -eq 3 ]; then
+        git checkout -D ${BRANCH}
+    else 
+        echo "???"
 fi
-
-git branch --set-upstream ${BRANCH} origin/${BRANCH}
